@@ -1,5 +1,5 @@
 const chatForm  = document.querySelector("#chat-form")
-const socket = io("http://127.0.0.1:3000");
+const socket = io("0.0.0.0");
 const chatMessages = document.querySelector(".chat-messages")
 
 const roomName = document.querySelector("#room-name")
