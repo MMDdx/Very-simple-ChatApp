@@ -5,20 +5,20 @@ const socket = require('socket.io');
 const formatMsg = require("./utils/messages")
 const app = express();
 const server = http.createServer(app);
-const io = socket(server, {cors: {origin: "*"}});
+const io = socket(server, {cors: {
+        origin: "*"
+    }});
+
 const {userJoin, getCurrentUser, userLeave, getRoomUsers} = require("./utils/users");
 // set static folder
 app.use(express.static(path.join(__dirname, 'public')));
 
 
 
-const port = 3000 || process.env.PORT;
+const port = 3012 || process.env.PORT;
 // app.listen(port, ()=> console.log(`Listening on port ${port}`));
 server.listen(port, () => {
     console.log("server running...")
-
-
-
 })
 
 
